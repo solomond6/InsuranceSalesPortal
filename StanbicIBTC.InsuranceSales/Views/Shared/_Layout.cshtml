@@ -1,0 +1,75 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>@ViewBag.Title - SIIB Sales Portal</title>
+    @Styles.Render("~/Content/css")
+    @Scripts.Render("~/bundles/modernizr")
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+</head>
+<body>
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <div class="row">
+                <div class="navbar-header">
+                    <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target=".navbar-collapse">
+                        <span class="sr-only">Toggle navigation</span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                        <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-link navbar-left" href="#">
+                        <img src="~/Assets/img/siib.png" class="img img-brand">
+                    </a>
+                </div>
+                <div class="collapse navbar-collapse" id="navcol-1">
+                    <ul class="nav navbar-nav navbar-right">
+                        <!--<li role="presentation" class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">Life Insurance</a>
+                            <ul class="dropdown-menu">
+                                <li>@Html.ActionLink("Life Savings", "#", "Life Savings")</li>
+                                <li>@Html.ActionLink("Term Life Savings", "#", "Term Life Savings")</li>
+                            </ul>
+                        </li>
+                        <li role="presentation" class="dropdown">
+                            <a href="#" class="dropdown-toggle" data-toggle="dropdown">General Insurance</a>
+                            <ul class="dropdown-menu">
+                                <li>@Html.ActionLink("Motor Insurance", "#", "Motor Insurance")</li>
+                                <li>@Html.ActionLink("Travel Insurance", "#", "Travel Insurance")</li>
+                                <li>@Html.ActionLink("Home Content Insurance", "#", "Home Content Insurance")</li>
+                            </ul>
+                        </li>-->
+                        <li role="presentation">@Html.ActionLink("FAQ's", "#", "FAQ's")</li>
+                        @{
+                            if (User.Identity.IsAuthenticated)
+                            {
+                                <li role="presentation">@Html.ActionLink((User.Identity.IsAuthenticated ? HttpContext.Current.User.Identity.Name : "Guest"), "MyProfile", "Users")</li>
+                                <li role="presentation">@Html.ActionLink("Sign Out", "Signout", "Users")</li>
+                            }
+                            else
+                            {
+                                <li role="presentation">@Html.ActionLink("Login", "Login", "Users")</li>
+                                <li role="presentation">@Html.ActionLink("Sign Up", "Signup", "Users")</li>
+                            }
+                        }
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </nav>
+    @RenderBody()
+    <footer class="site-footer">
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6">
+                    <h5>SIIBL © 2017</h5>
+                </div>
+                <div class="col-sm-6 social-icons"><a href="#"><span class="fa fa-facebook"></span></a><a href="#"><span class="fa fa-twitter"></span></a><a href="#"><span class="fa fa-instagram"></span></a></div>
+            </div>
+        </div>
+        <div></div>
+    </footer>
+    @RenderSection("scripts", required: false)
+</body>
+</html>

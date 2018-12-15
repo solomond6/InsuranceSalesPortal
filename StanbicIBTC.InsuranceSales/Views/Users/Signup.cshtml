@@ -1,0 +1,85 @@
+﻿
+<div class="jumbotron hero-other">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-7 col-md-offset-3">
+                <div id="card">
+                    <div class="front signup_form">
+                        <form name="signup" class="login-form" id="signup-form" method="post" >
+                            <h3 class="text-center">Sign Up Form</h3>
+                            <div class="row">
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="form-label">Firstname</label>
+                                        <div class="input-group input-field">
+                                            <input type="text" name="Firstname" class="form-control" placeholder="Firstname">
+                                            <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="form-label">Surname</label>
+                                        <div class="input-group input-field">
+                                            <input type="text" name="Lastname" class="form-control" placeholder="Surname">
+                                            <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="form-label">Email Address</label>
+                                        <div class="input-group input-field">
+                                            <input type="email" name="EmailAddress" class="form-control" placeholder="Email Address">
+                                            <span class="input-group-addon"><i class="glyphicon glyphicon-envelope"></i></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="form-label">Phone Number</label>
+                                        <div class="input-group input-field">
+                                            <input type="text" name="PhoneNumber" class="form-control" placeholder="Phone Number">
+                                            <span class="input-group-addon"><i class="glyphicon glyphicon-phone"></i></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="form-label">Password</label>
+                                        <div class="input-group input-field">
+                                            <input type="password" id="Password" name="Password" class="form-control" placeholder="Password">
+                                            <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group">
+                                        <label class="form-label">Confirm Password</label>
+                                        <div class="input-group input-field">
+                                            <input type="password" id="Conf_Password" name="Conf_Password" class="form-control" placeholder="Confirm Password">
+                                            <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    <div class="form-group sign-btn">
+                                        <button type="submit" class="btn btn-primary small blue" id="search-found">SIGN UP</button>
+                                    </div>
+                                </div>
+                                <div class="col-md-6">
+                                    You have already Account <a href="~/users/login" id="unflip-btn" class="signup">Log In</a>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@Scripts.Render("~/bundles/jquery")
+@Scripts.Render("~/bundles/bootstrap")
+<script type="text/javascript" src="~/Scripts/jquery.validate.min.js"></script>
+<script type="text/javascript" src="~/Scripts/app/signup.js"></script>

@@ -1,0 +1,41 @@
+﻿
+<div class="jumbotron hero-other">
+    <div class="container">
+        <div class="row">
+            <div class="col-md-4 col-md-offset-4">
+                <div id="card">
+                    <div class="front signin_form">
+                        <form name="login" class="login-form" id="login-form" method="post">
+                            <h3 class="text-center">Login Your Account</h3>
+                            <div class="form-group">
+                                <label class="form-label">Email Address</label>
+                                <div class="input-group input-field">
+                                    <input type="email" name="EmailAddress" class="form-control" placeholder="Type your email">
+                                    <span class="input-group-addon"><i class="glyphicon glyphicon-user"></i></span>
+                                </div>
+                            </div>
+                            <div class="form-group">
+                                <label class="form-label">Password</label>
+                                <div class="input-group input-field">
+                                    <input type="password" name="Password" class="form-control" placeholder="Type your password">
+                                    <span class="input-group-addon"><i class="glyphicon glyphicon-lock"></i></span>
+                                </div>
+                            </div>
+                            <div class="processing alert alert-danger" role="alert"></div>
+                            <div class="form-group sign-btn">
+                                <input type="submit" class="btn btn-primary btn-sm" value="Log in">
+                            </div>
+                            <a href="~/users/forgotpassword" class="forgot">Can't access your account?</a>
+                            <a href="~/users/signup" class="signup signup_link">Sign up for a new account</a>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+@Scripts.Render("~/bundles/jquery")
+@Scripts.Render("~/bundles/bootstrap")
+<script type="text/javascript" src="~/Scripts/jquery.validate.min.js"></script>
+<script type="text/javascript" src="~/Scripts/app/login.js"></script>

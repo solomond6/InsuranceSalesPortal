@@ -1,0 +1,525 @@
+﻿<div class="jumbotron hero">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-6 get-it">
+                <h1 class="text-left">Buy Insurance Online</h1>
+                <div class="row text-center">
+
+                    <div class="col-md-5 btn-pad1">
+                        <a class="btn btn-primary small1 btn-sm" role="button" href="#">
+                            <span class="fa fa-umbrella fa-6"></span> Life Savings
+                        </a>
+                    </div>
+
+                    <div class="col-md-5 btn-pad1">
+                        <a class="btn btn-primary small1 btn-sm" role="button" href="#">
+                            <span class="fa fa-umbrella fa-6"></span> Term Life Savings
+                        </a>
+                    </div>
+                    <div class="col-md-5 btn-pad1">
+                        <a class="btn btn-primary small1 btn-sm" role="button" href="motor.html">
+                            <span class="fa fa-car fa-6"></span> Motor Insurance
+                        </a>
+                    </div>
+                    <div class="col-md-5 btn-pad1">
+                        <a class="btn btn-primary small1 btn-sm" role="button" href="#">
+                            <span class="fa fa-plane fa-6"></span> Travel Insurance
+                        </a>
+                    </div>
+                    <div class="col-md-5 btn-pad1">
+                        <a class="btn btn-primary small1 btn-sm" role="button" href="#">
+                            <span class="fa fa-home fa-6"></span> Home Content Insurance
+                        </a>
+                    </div>
+                </div>
+                <p class="text-left">From Reliable Insurance Companies in Nigeria</p>
+            </div>
+
+            <div class="form-bkg-black col-xs-12 col-sm-12 col-md-6">
+                <form name="inquery" id="inquiryForm" method="post" action="#">
+                    <div class="form-group">
+                        <label for="InsuranceType" class="lbl-ins">Insurance Type</label>
+                        <div class="input-field">
+                            <select class="form-control" name="insuranceType" id="insuranceType">
+                                <option value="">Select An Insurance Type</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="Category" class="lbl-ins">Category</label>
+                        <div class="input-field">
+                            <select class="form-control" name="insuranceCategory">
+                                <option value="">Select Vehicle Category</option>
+                                <option value="Car">Car</option>
+                                <option value="Bus">Bus</option>
+                                <option value="Truck">Truck</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="Duration" class="lbl-ins">Duration</label>
+                        <div class="input-field">
+                            <select class="form-control" name="duration">
+                                <option value="">Select Duration</option>
+                                <option value="3">Quarter</option>
+                                <option value="6">Bi-Annual </option>
+                                <option value="12">Annual</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="VehicleValue" class="lbl-ins">Vehicle Value</label>
+                        <div class="input-field">
+                            <div class="input-group">
+                                <div class="input-group-addon">₦</div>
+                                <input type="text" name="vehicleValue" class="form-control" id="VehicleValue" placeholder="Vehicle Value" value="">
+                            </div>
+                        </div>
+                    </div>
+
+                    <!--<div class="form-group">
+                        <label for="PhoneNo" class="lbl-ins">Phone No</label>
+                        <div class="input-group">
+                            <div class="input-group-addon"><i class="fa fa-phone"></i></div>
+                            <input type="text" class="form-control" id="PhoneNo" placeholder="e.g 090909988909">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="name" class="lbl-ins">Name</label>
+                        <div class="input-group">
+                            <div class="input-group-addon"><i class="fa fa-user"></i></div>
+                            <input type="text" class="form-control" id="email" placeholder="e.g Ade Ade">
+                        </div>
+                    </div>
+                    <div class="form-group">
+                        <label for="email" class="lbl-ins">Email</label>
+                        <div class="input-group">
+                            <div class="input-group-addon"><i class="fa fa-envelope"></i></div>
+                            <input type="email" class="form-control" id="email" placeholder="e.g abc@123.com">
+                        </div>
+                    </div>-->
+                    <button type="submit" class="btn btn-primary small blue" id="search-found">Submit</button>
+                    <div class="processing btn btn-primary blue" style="display:none; width:100%;"><img src="~/Assets/img/ajax-loader.gif" id="processing" /></div>
+                </form>
+            </div>
+        </div>
+
+    </div>
+</div>
+
+<div class="content-bkg container-fluid" id="search-result">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12">
+                <h2 class="text-left">We’ve found Some Comprehensive Insurance Plans matching your search criteria</h2>
+
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12">
+                <div class="all-inclusive hidden-xs hidden-sm">
+                    <div class="all-inclusive-details">
+                        <h3><b>Comprehensive Insurances Includes the Following:</b></h3>
+                        <ul>
+                            <li>
+                                <span class="label">Theft</span>
+                                <span class="tooltip-icon" data-toggle="tooltip" data-placement="right" title="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the le"></span>
+                            </li>
+                            <li>
+                                <span class="label">Damages </span>
+                                <span class="tooltip-icon" data-toggle="tooltip" data-placement="right" title="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the le"></span>
+                            </li>
+                            <li>
+                                <span class="label">Accident </span>
+                                <span class="tooltip-icon" data-toggle="tooltip" data-placement="right" title="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the le"></span>
+                            </li>
+                            <li>
+                                <span class="label">Lorem Ipsum is simply dummy text of the printing and typesetting </span>
+                                <span class="tooltip-icon" data-toggle="tooltip" data-placement="right" title="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the le"></span>
+                            </li>
+                            <li>
+                                <span class="label">Lorem Ipsum is simply dummy text of the printing and typesetting </span>
+                                <span class="tooltip-icon" data-toggle="tooltip" data-placement="right" title="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the le"></span>
+                            </li>
+                            <li>
+                                <span class="label">Lorem Ipsum is simply dummy text of the printing and typesetting </span>
+                                <span class="tooltip-icon" data-toggle="tooltip" data-placement="right" title="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the le"></span>
+                            </li>
+                            <li>
+                                <span class="label">Lorem Ipsum is simply dummy text of the printing and typesetting </span>
+                                <span class="tooltip-icon" data-toggle="tooltip" data-placement="right" title="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the le"></span>
+                            </li>
+                            <li>
+                                <span class="label">Lorem Ipsum is simply dummy text of the printing and typesetting </span>
+                                <span class="tooltip-icon" data-toggle="tooltip" data-placement="right" title="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the le"></span>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="call-me">
+                        <h3 class="text-center">Get Call</h3>
+                        <a class="btn small blue" href="#" data-toggle="collapse" aria-expanded="false" aria-controls="cmn">Call me now <img src="~/Assets/img/phone-icon.svg" style="float: right;"></a>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="block-flat">
+            <h3><b>Additional Benefit</b></h3>
+            <div class="content table-responsive">
+                <table class="table no-border table-striped componentsTable">
+                    <thead class="no-border">
+                        <tr>
+                            <th style="width:20%;"></th>
+                            <!--<th class="text-center">
+                                Buy Back
+                                <br>
+                                <span class="tooltip-icon" data-toggle="tooltip" data-placement="right" title="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the le"></span>
+                            </th>
+                            <th class="text-center">
+                                Tracking Device
+                                <br>
+                                <span class="tooltip-icon" data-toggle="tooltip" data-placement="right" title="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the le"></span>
+                            </th>
+                            <th class="text-center">
+                                Vehicle Replacement
+                                <br>
+                                <span class="tooltip-icon" data-toggle="tooltip" data-placement="right" title="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the le"></span>
+                            </th>
+                            <th class="text-center">
+                                Flood, Storm
+                                <br>
+                                <span class="tooltip-icon" data-toggle="tooltip" data-placement="right" title="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the le"></span>
+                            </th>
+                            <th class="text-center">
+                                Strike, Riot
+                                <br>
+                                <span class="tooltip-icon" data-toggle="tooltip" data-placement="right" title="Lorem Ipsum is simply dummy text of the printing and typesetting industry. Lorem Ipsum has been the industry's standard dummy text ever since the 1500s, when an unknown printer took a galley of type and scrambled it to make a type specimen book. It has survived not only five centuries, but also the le"></span>
+                            </th>
+                            <th class="text-center">
+                                Pay Per Year
+                                <br>
+                                <span class="tooltip-icon" data-toggle="tooltip" data-placement="right" title="Default Currency is Naira"></span>
+                            </th>-->
+                            <th class="text-center"></th>
+                        </tr>
+                    </thead>
+                    <tbody class="no-border-y">
+                       <!-- <tr>
+                            <td><img src="~/Assets/img/leadway.png" class="autoResizeImage"></td>
+                            <td class="text-center primary-emphasis">
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox" name="buy_back" class="mycheckbox" value="23"/>
+                                    </label>
+                                </div>
+                            </td>
+                            <td class="text-center primary-emphasis">
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox" name="" class="mycheckbox" value="23">
+                                    </label>
+                                </div>
+                            </td>
+                            <td class="text-center primary-emphasis">
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox" name="" class="mycheckbox" value="23"/>
+                                    </label>
+                                </div>
+
+                            </td>
+                            <td class="text-center primary-emphasis">
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox" name="" class="mycheckbox" value="23">
+                                    </label>
+                                </div>
+                            </td>
+                            <td class="text-center primary-emphasis">
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox" name="" class="mycheckbox" value="23">
+                                    </label>
+                                </div>
+                            </td>
+                            <td class="text-center">
+                                <span class="iTotal" style="font-size:24px;font-weight:bold;color:#158cba;"></span>
+                            </td>
+                            <td class="text-center">
+                                <a href="~/checkout" class="btn blue sm"> BUY NOW</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><img src="~/Assets/img/mansard.png" class="autoResizeImage"></td>
+                            <td class="text-center primary-emphasis">
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox" name="" class="mycheckbox" value="23">
+                                    </label>
+                                </div>
+                            </td>
+                            <td class="text-center primary-emphasis">
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox" name="" class="mycheckbox" value="23">
+                                    </label>
+                                </div>
+                            </td>
+                            <td class="text-center primary-emphasis">
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox" name="" class="mycheckbox" value="23">
+                                    </label>
+                                </div>
+                            </td>
+                            <td class="text-center primary-emphasis">
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox" name="" class="mycheckbox" value="23">
+                                    </label>
+                                </div>
+                            </td>
+                            <td class="text-center primary-emphasis">
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox" name="" class="mycheckbox" value="23">
+                                    </label>
+                                </div>
+                            </td>
+                            <td class="text-center">
+                                <span class="iTotal" style="font-size:24px;font-weight:bold;color:#158cba;"></span>
+                            </td>
+                            <td class="text-center">
+                                <a href="~/checkout" class="btn blue sm"> BUY NOW</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><img src="~/Assets/img/nem.png" class="autoResizeImage"></td>
+                            <td class="text-center primary-emphasis">
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox" name="" class="mycheckbox" value="23">
+                                    </label>
+                                </div>
+                            </td>
+                            <td class="text-center primary-emphasis">
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox" name="" class="mycheckbox" value="23">
+                                    </label>
+                                </div>
+                            </td>
+                            <td class="text-center primary-emphasis">
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox" name="" class="mycheckbox" value="23">
+                                    </label>
+                                </div>
+
+                            </td>
+                            <td class="text-center primary-emphasis">
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox" name="" class="mycheckbox" value="23">
+                                    </label>
+                                </div>
+                            </td>
+                            <td class="text-center primary-emphasis">
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox" name="" class="mycheckbox" value="23">
+                                    </label>
+                                </div>
+
+                            </td>
+                            <td class="text-center">
+                                <span class="iTotal" style="font-size:24px;font-weight:bold;color:#158cba;"></span>
+                            </td>
+                            <td class="text-center">
+                                <a href="~/checkout" class="btn blue sm"> BUY NOW</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><img src="~/Assets/img/custodian.png" class="autoResizeImage"></td>
+                            <td class="text-center primary-emphasis">
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox" name="" class="mycheckbox" value="23">
+                                    </label>
+                                </div>
+                            </td>
+                            <td class="text-center primary-emphasis">
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox" name="" class="mycheckbox" value="23">
+                                    </label>
+                                </div>
+                            </td>
+                            <td class="text-center primary-emphasis">
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox" name="" class="mycheckbox" value="23">
+                                    </label>
+                                </div>
+
+                            </td>
+                            <td class="text-center primary-emphasis">
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox" name="" class="mycheckbox" value="23">
+                                    </label>
+                                </div>
+                            </td>
+                            <td class="text-center primary-emphasis">
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox" name="" class="mycheckbox" value="23">
+                                    </label>
+                                </div>
+
+                            </td>
+                            <td class="text-center">
+                                <span class="iTotal" style="font-size:24px;font-weight:bold;color:#158cba;"></span>
+                            </td>
+                            <td class="text-center">
+                                <a href="~/checkout" class="btn blue sm"> BUY NOW</a>
+                            </td>
+                        </tr>
+                        <tr>
+                            <td><img src="~/Assets/img/law-union.png" class="autoResizeImage"></td>
+                            <td class="text-center primary-emphasis">
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox" name="" class="mycheckbox" value="23">
+                                    </label>
+                                </div>
+                            </td>
+                            <td class="text-center primary-emphasis">
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox" name="" class="mycheckbox" value="23">
+                                    </label>
+                                </div>
+                            </td>
+                            <td class="text-center primary-emphasis">
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox" name="" class="mycheckbox" value="23">
+                                    </label>
+                                </div>
+
+                            </td>
+                            <td class="text-center primary-emphasis">
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox" name="" class="mycheckbox" value="23">
+                                    </label>
+                                </div>
+                            </td>
+                            <td class="text-center primary-emphasis">
+                                <div class="checkbox">
+                                    <label>
+                                        <input type="checkbox" name="" class="mycheckbox" value="23">
+                                    </label>
+                                </div>
+
+                            </td>
+                            <td class="text-center">
+                                <span class="iTotal" style="font-size:24px;font-weight:bold;color:#158cba;"></span>
+                            </td>
+                            <td class="text-center">
+                                <a href="~/checkout" class="btn blue sm"> BUY NOW</a>
+                            </td>
+                        </tr>-->
+                       
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+</div>
+
+<section id="product-bar">
+    <div class="light-content-bkg container-fluid">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-12">
+                    <h2 class="text-center color-blue" style="font-family: 'Franklin Gothic Medium', 'Franklin Gothic', 'ITC Franklin Gothic', Arial, sans-serif;">BUY NOW</h2>
+                    <div class="redline"></div>
+                </div>
+            </div>
+            <div class="row text-center">
+                <div class="col-md-1">
+                </div>
+                <div class="iconset">
+                    <a href="motor.html">
+                        <div class="col-md-2 col-sm-2">
+                            <div class="icon-group">
+                                <div class="icon"><i class="material-icons">&#xE531;</i></div>
+                                <div class="description">Motor Insurance</div>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="col-md-2 col-sm-2">
+                            <div class="icon-group">
+                                <div class="icon"><i class="material-icons">&#xE407;</i></div>
+                                <div class="description">Life Savings</div>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="col-md-2 col-sm-2">
+                            <div class="icon-group">
+                                <div class="icon"><i class="material-icons">&#xE84E;</i></div>
+                                <div class="description">Term Life Savings</div>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="col-md-2 col-sm-2">
+                            <div class="icon-group">
+                                <div class="icon"><i class="material-icons">airplanemode_active</i></div>
+                                <div class="description">Travel Insurance</div>
+                            </div>
+                        </div>
+                    </a>
+                    <a href="#">
+                        <div class="col-md-2 col-sm-2">
+                            <div class="icon-group">
+                                <div class="icon"><i class="material-icons">home</i></div>
+                                <div class="description">Home Content Insurance</div>
+                            </div>
+                        </div>
+                    </a>
+                </div>
+                <div class="col-md-1">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section class="light-content-bkg2 container-fluid">
+    <div class="container">
+        <div class="row">
+            <div class="col-xs-12 col-sm-12 col-md-12">
+                <h2 class="text-center color-blue " style="font-family: 'Franklin Gothic Medium', 'Franklin Gothic', 'ITC Franklin Gothic', Arial, sans-serif;">INSURANCE COMPANIES</h2>
+                <div class="redline"></div>
+            </div>
+        </div>
+
+        <div class="carousel slide" data-ride="carousel" data-type="multi" data-interval="3000" id="myCarousel">
+            <div class="carousel-inner">
+                
+            </div>
+        </div>
+
+    </div>
+</section>
+@Scripts.Render("~/bundles/jquery")
+@Scripts.Render("~/bundles/bootstrap")
+<script type="text/javascript" src="~/Scripts/jquery.validate.min.js"></script>
+<script type="text/javascript" src="~/Scripts/Underscore.min.js"></script>
+<script type="text/javascript" src="~/Scripts/ModalWizard.js"></script>
+<script type="text/javascript" src="~/Scripts/app/products.js"></script>
